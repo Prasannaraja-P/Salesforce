@@ -1,0 +1,44 @@
+<template>
+  <lightning-card variant="Narrow" title="Hello" icon-name="standard:account">
+    <div class="slds-var-p-around_small">
+      <lightning-input
+        value={numberOne}
+        type="number"
+        variant="label-inline"
+        name="number1"
+        label="Enter number 1"
+        onchange={handleInputChange}
+      ></lightning-input>
+      <lightning-input
+        value={numberTwo}
+        type="number"
+        variant="label-inline"
+        name="number2"
+        label="Enter number 2"
+        onchange={handleInputChange}
+      ></lightning-input>
+      <lightning-input
+        value={numberThree}
+        type="number"
+        variant="label-inline"
+        name="number3"
+        label="Enter number 3"
+        onchange={handleInputChange}
+      ></lightning-input>
+      <div class="slds-grid slds-gutters">
+        <div class="slds-col slds-size_9-of-12">
+          <p class="slds-var-m-vertical_medium slds-text-heading_small">
+            <strong>Greatest of the three numbers : {greatestNumber}</strong>
+          </p>
+        </div>
+        <div class="slds-col slds-size_3-of-12" style="margin-top: 35px">
+          <lightning-button
+            variant="brand"
+            label="Find Greatest"
+            onclick={handleClick}
+          ></lightning-button>
+        </div>
+      </div>
+    </div>
+  </lightning-card>
+</template>
